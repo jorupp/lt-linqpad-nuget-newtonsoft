@@ -31,26 +31,29 @@
         </section>
         <section>
           <section>
-            <h3>LINQPad</h3>
+            <h2>LINQPad</h2>
             <p>So, something with <strong>LINQ</strong>, right?</p>
             <p class="fragment">Yeah, sure, but so much more.</p>
           </section>
+          <section>Demo</section>
           <section>
-            <h4>LINQPad - what to do with it</h4>
+            <h3>LINQPad - what to do with it</h3>
             <ul>
               <li>Expression</li>
               <li>Statements</li>
               <li>Program (w/ classes + methods)</li>
               <li><code>.Dump()</code> is amazing</li>
             </ul>
+            <p class="fragment">Great way to play around with some calls that you don't completely understand yet, or build a simple repro case for a bug you're seeing with a library</p>
           </section>
           <section>
-              <h4>LINQPad + Nuget</h4>
-              <p>Great way to play with a new library and see how it behaves.</p>
-              <p>Only available in Developer + Premium</p>
-              <p>We have a premium license - contact <code>TBD</code> to get access to it.</p>
-            </section>
+            <h3>LINQPad + Nuget</h3>
+            <p>ie. add Nuget packages to your LINQPad snippet</p>
+            <p>Great way to play with a new library and see how it behaves.</p>
+            <p>Only available in Developer + Premium</p>
+            <p>We have a premium license - contact <code>TBD</code> to get access to it.</p>
           </section>
+          <section>Demo</section>
         </section>
         <section>
           <section>
@@ -60,6 +63,7 @@
               <li>Can parse, manipulate, and write</li>
             </ul>
           </section>
+          <section>Demo</section>
           <section>
             <h4>Newtonsoft.Json.Linq</h4>
             <ul>
@@ -69,9 +73,10 @@
               <li><code>JToken</code> - base type of the above</li>
             </ul>
           </section>
+          <section>Demo</section>
           <section>
             <h4>Won't this be a memory/CPU hog?</h4>
-            <p>Yes, this approach does:</p>
+            <p>Well, this is what happens with this approach:</p>
             <ul>
               <li>Read the string from the source</li>
               <li>Create a series of <code>JToken</code>-based objects</li>
@@ -80,6 +85,14 @@
             <p class="fragment">Most of the time, you don't have to worry about this overhead - I/O will be much slower</p>
             <p class="fragment">You can use <code>JsonTextReader</code> and <code>JToken.ReadFromAsync()</code> (and similar classes/calls for writes) to save memory</p>
           </section>
+          <section>Demo</section>
+        </section>
+        <section>
+          <h2>LINQPad is great</h2>
+          <h2>Newtonsoft.JSON is great</h2>
+        </section>
+        <section>
+          <h1>Questions?</h1>
         </section>
       </div>
     </div>
