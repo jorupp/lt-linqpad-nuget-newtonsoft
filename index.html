@@ -77,12 +77,13 @@
           <section>
             <h4>Won't this be a memory/CPU hog?</h4>
             <p>Well, this is what happens with this approach:</p>
-            <ul>
+            <ol>
               <li>Read the string from the source</li>
               <li>Create a series of <code>JToken</code>-based objects</li>
               <li>Create the C# object</li>
-            </ul>
-            <p class="fragment">Most of the time, you don't have to worry about this overhead - I/O will be much slower</p>
+            </ol>
+            <p class="fragment">CPU will probably be fine - I/O will be much slower</p>
+            <p class="fragment">You <b>do</b> need enough RAM for 1+2 (and 2+3)</p>
             <p class="fragment">You can use <code>JsonTextReader</code> and <code>JToken.ReadFromAsync()</code> (and similar classes/calls for writes) to save memory</p>
           </section>
           <section>Demo</section>
