@@ -24,8 +24,63 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>Slide 1</section>
-        <section>Slide 2</section>
+        <section>
+          <h1>LINQPad + Nuget + Newtonsoft.Json</h1>
+          <p>&nbsp;</p>
+          <p>Quick C# prototyping and JSON too</p>
+        </section>
+        <section>
+          <section>
+            <h3>LINQPad</h3>
+            <p>So, something with <strong>LINQ</strong>, right?</p>
+            <p class="fragment">Yeah, sure, but so much more.</p>
+          </section>
+          <section>
+            <h4>LINQPad - what to do with it</h4>
+            <ul>
+              <li>Expression</li>
+              <li>Statements</li>
+              <li>Program (w/ classes + methods)</li>
+              <li><code>.Dump()</code> is amazing</li>
+            </ul>
+          </section>
+          <section>
+              <h4>LINQPad + Nuget</h4>
+              <p>Great way to play with a new library and see how it behaves.</p>
+              <p>Only available in Developer + Premium</p>
+              <p>We have a premium license - contact <code>TBD</code> to get access to it.</p>
+            </section>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Newtonsoft.Json - why?</h3>
+            <ul>
+              <li>Lightweight, powerful JSON manipulation</li>
+              <li>Can parse, manipulate, and write</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Newtonsoft.Json.Linq</h4>
+            <ul>
+              <li><code>JObject</code> - maps to C# object</li>
+              <li><code>JArray</code> - maps to C# Array/List</li>
+              <li><code>JValue</code> - maps to C# string/int/etc.</li>
+              <li><code>JToken</code> - base type of the above</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Won't this be a memory/CPU hog?</h4>
+            <p>Yes, this approach does:</p>
+            <ul>
+              <li>Read the string from the source</li>
+              <li>Create a series of <code>JToken</code>-based objects</li>
+              <li>Create the C# object</li>
+            </ul>
+            <p class="fragment">Most of the time, you don't have to worry about this overhead - I/O will be much slower</p>
+            <p class="fragment">You can use <code>JsonTextReader</code> and <code>JToken.ReadFromAsync()</code> (and similar classes/calls for writes) to save memory</p>
+          </section>
+        </section>
       </div>
     </div>
 
